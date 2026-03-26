@@ -34,7 +34,36 @@ tw-link:focus, tw-link:hover, tw-link:active, tw-link.visited:hover {
   text-decoration: none;
 }
 tw-passage {
-  padding-bottom: 200px;}</style><script role="script" id="twine-user-script" type="text/twine-javascript">window.onload = function () {
+  padding-bottom: 200px;}
+
+img {  /* this selects all image (img) elements */
+  width: 100%;
+}
+.story-image-smaller {  /* this selects all elements with the story-image-smaller class not just images */
+  width: 50%;
+}
+img.story-image-smallest {  /* this selects all images with the story-image-smallest class */
+  width: 25%;
+}
+.story-room {
+  display: grid;  /* sets the display to grid on the surrounding div */
+  grid-template-columns: 50% 50%;  /* sets each column to 50% */
+}
+.story-text {
+  grid-column: 1;  /* sets which column the text appears in */
+  grid-row: 1;
+  box-sizing: border-box;
+  padding: 10px;
+}
+.story-image {
+  grid-column: 2;  /* sets which column the image appears in */
+  grid-row: 1;
+}
+.story-image img {
+max-width: 100%;
+height: auto;
+display: block;
+}</style><script role="script" id="twine-user-script" type="text/twine-javascript">window.onload = function () {
     if (!document.getElementById("bg-music")) {
         var audio = document.createElement("audio");
         audio.id = "bg-music";
@@ -72,7 +101,12 @@ This is another line.] (click-append:&quot;This is another line.&quot;)[
 
 This is yet another line.]</tw-passagedata><tw-passagedata pid="6" name="Transition" tags="" position="725,575" size="100,100">+ (t8n-delay: 3s) + (t8n: &quot;fade-down&quot;) [this is a test.]
 + (t8n: &quot;flicker&quot;) [not the final product.]
-+ (t8n-delay: 8s) + (t8n: &quot;dissolve&quot;) [whd dfdf sdft.]</tw-passagedata><tw-passagedata pid="7" name="Oni" tags="" position="450,700" size="100,100">Hello. Can you hear this?</tw-passagedata></tw-storydata>
++ (t8n-delay: 8s) + (t8n: &quot;dissolve&quot;) [whd dfdf sdft.]</tw-passagedata><tw-passagedata pid="7" name="Oni" tags="" position="450,700" size="100,100">Hello. Can you see this?
+
+&lt;img class=&quot;story-image-smaller&quot; src=&quot;./images/example.jpg&quot; alt=&quot;an example&quot; /&gt;
+
+[[Go next]]</tw-passagedata><tw-passagedata pid="8" name="Go next" tags="" position="450,825" size="100,100">&lt;div class=&quot;story-room&quot;&gt;&lt;div class=&quot;story-text&quot;&gt;This is example text.&lt;/div&gt;&lt;div class=&quot;story-image&quot;&gt;&lt;img src=&quot;./images/test2.jpg&quot; alt=&quot;an example&quot; /&gt;&lt;/div&gt;&lt;/div&gt;
+</tw-passagedata></tw-storydata>
 <script title="Twine engine code" data-main="harlowe">(function(){"use strict";
 var require,define;!function(){var e={},r={};require=function(i){var n=e[i];return n&&(r[i]=n[1].apply(void 0,n[0].map(require)),e[i]=void 0),r[i]},(define=function(r,i,n){if("function"==typeof r)return r();e[r]=[i,n]}).amd=!0}();/*!
  * https://github.com/paulmillr/es6-shim
