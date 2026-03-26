@@ -68,6 +68,9 @@ tw-story[tags~="example-background"] {  /* the tag added in step 2 */
   background-image: url(./images/test2.jpg);  /* the image added in step 1 */
   background-size: cover;  /* cover the whole element */
   background-repeat: no-repeat;  /* do not repeat the background image */
+}
+tw-story[tags~="example-background"] {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(./images/background-example.jpg) center center / cover no-repeat fixed;
 }</style><script role="script" id="twine-user-script" type="text/twine-javascript">window.onload = function () {
     if (!document.getElementById("bg-music")) {
         var audio = document.createElement("audio");
@@ -84,7 +87,7 @@ tw-story[tags~="example-background"] {  /* the tag added in step 2 */
         audio.appendChild(source);
         document.body.appendChild(audio);
     }
-};</script><tw-tag name="example-background" color="orange"></tw-tag><tw-passagedata pid="1" name="Yep" tags="" position="600,325" size="100,100">Do you want to go to the [[servo]] or local [[traphouse]]</tw-passagedata><tw-passagedata pid="2" name="servo" tags="" position="600,450" size="100,100">You get a can of Celsius.
+};</script><tw-tag name="example-background" color="orange"></tw-tag><tw-passagedata pid="1" name="Yep" tags="" position="600,325" size="100,100">Do you want to go to the [[servo]] or local [[traphouse]]</tw-passagedata><tw-passagedata pid="2" name="servo" tags="example-background" position="600,450" size="100,100">You get a can of Celsius.
 
 Lets go to [[click replace and image experiment]]
 </tw-passagedata><tw-passagedata pid="3" name="traphouse" tags="" position="725,450" size="100,100">You decide to grab one-seven of ice.
